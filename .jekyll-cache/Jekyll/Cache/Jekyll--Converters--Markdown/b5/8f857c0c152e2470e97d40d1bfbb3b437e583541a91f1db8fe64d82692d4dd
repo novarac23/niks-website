@@ -1,4 +1,4 @@
-I"Ç<p>Simple is a beautiful but functional jekyll theme. The font-type setting looks really good when writers use CJK mixed with English.</p>
+I"¹<p>Simple is a beautiful but functional jekyll theme. The font-type setting looks really good when writers use CJK mixed with English.</p>
 
 <p>First of all, letâ€™s have a glance at the basic styles: <a href="http://github.com/wild-flame/jekyll-simple">link</a>, <strong>strong</strong>, <em>italic</em>, <del>deletion</del>, <ins>insertion</ins>.</p>
 
@@ -66,7 +66,7 @@
 
 <h3 id="image">Image:</h3>
 
-<p><img src="/jekyll-simple/assets/img/image.jpg" alt="" /></p>
+<p><img src="/assets/img/image.jpg" alt="" /></p>
 
 <h3 id="table">Table:</h3>
 
