@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Growth
-permalink: /growth/
+title: Books & Courses
+permalink: /books-and-courses/
 ---
 
 One of my favorite things to do is to learn new things and grow. Here's a list
