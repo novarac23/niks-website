@@ -4,7 +4,7 @@ title: Talks
 permalink: /talks/
 ---
 
-Here is a list of talks that I've given:
+Here is a list of talks that I\'ve given:
 
 - Demystifying Machine Learning
   - Description: Goal of this talk was to explain machine learning to people who are not data scientists. It tries to simplify certain concepts and as a result, hopefully, demystify machine learning.
