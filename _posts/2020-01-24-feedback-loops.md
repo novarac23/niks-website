@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Feedback Loops
-category: engineering
+category: data science & engineering
 description: My thoughts on feedback loops
 ---
 

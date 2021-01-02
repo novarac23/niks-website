@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent Overengineering
-category: engineering
+category: data science & engineering
 description: My thoughts on preventing overngineering
 ---
 

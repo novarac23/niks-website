@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tweetanator Updates
-category: engineering
+category: data science & engineering
 description: Updates about tweetanator
 ---
 
