@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nik's Website</title>
+    <description>Nik's personal blog, portfolio and everything in between
+</description>
+    <link>http://novarac.com/</link>
+    <atom:link href="http://novarac.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 02 Jan 2021 14:37:38 +0000</pubDate>
+    <lastBuildDate>Sat, 02 Jan 2021 14:37:38 +0000</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>Lessons I Learned In 2020</title>
+        <description>&lt;p&gt;2020 was a crazy year. I’ve learned (and in some cases relearned) a lot. Here are a few of the most important lessons from this year:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Without clarity in the mind, it’s very easy for anxiety, confusion and overthinking to creep in. (journaling &amp;amp; &lt;a href=&quot;https://www.headspace.com&quot;&gt;meditation&lt;/a&gt; helped me a lot with this)&lt;/li&gt;
+  &lt;li&gt;We only need to worry about things that are in our control. (highly recommend &lt;a href=&quot;https://en.wikipedia.org/wiki/Stoicism&quot;&gt;Stoicism&lt;/a&gt; for practicing this)&lt;/li&gt;
+  &lt;li&gt;One of the best ways to get better at a thing is just to do the thing (even if its for a bit) every day.&lt;/li&gt;
+  &lt;li&gt;Good diet, sleep and exercise are staples of a good life. Skip out on any of those and it will eventually catch up with you.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+        <link>http://novarac.com/life/2021/01/01/lessons-learned-2020.html</link>
+        <guid isPermaLink="true">http://novarac.com/life/2021/01/01/lessons-learned-2020.html</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>Tweetanator Updates</title>
+        <description>&lt;p&gt;I recently made a few updates to one of my old projects called Tweetanator. Original idea was to create a chrome plugin that would allow users to filter their Twitter feeds based on a sentiment. I quickly realized that would involve writing a decent amount of Javascript and decided not to go down that route :)&lt;/p&gt;
+
+&lt;p&gt;Instead I ended up creating a simple flask app where users had to type out their tweet and the app would determine the sentiment of the tweet. That was a few years ago and as we all know in the ML world a few years means it’s actually very old. I thought it would be cool to train a new model and add a few features to the app.&lt;/p&gt;
+
+&lt;p&gt;If you don’t want to read about the updates and just want to check out the app here’s the link: &lt;a href=&quot;https://tweetanator.novarac.com&quot;&gt;https://tweetanator.novarac.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;updates&quot;&gt;Updates&lt;/h2&gt;
+
+&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
+
+&lt;p&gt;For a new model I ended up going with a simple LSTM network. Model was trained on &lt;a href=&quot;http://help.sentiment140.com/for-students&quot;&gt;sentiment140&lt;/a&gt; dataset. Here’s the train/validation accuracy graph (blue line is training, orange is validation):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://novarac.com/assets/img/validation_accuracy_tweetanator.png&quot; alt=&quot;validation_accuracy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Results shown above were after 30 epochs. These are not SOTA numbers and an LSTM network is not a cutting edge model, but they are good enough for Tweetanator.&lt;/p&gt;
+
+&lt;h3 id=&quot;app&quot;&gt;App&lt;/h3&gt;
+
+&lt;p&gt;I added one major feature to the app. Users can now search Twitter for a specific topic and get a sentiment analysis breakdown of the results. Here’s an example of how that looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://novarac.com/assets/img/tweetanator_histogram.png&quot; alt=&quot;histogram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also added a separate page for the old functionality of the app (type out the tweet and get the sentiment).&lt;/p&gt;
+
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing thoughts&lt;/h2&gt;
+
+&lt;p&gt;I had a lot of fun updating &lt;a href=&quot;https://tweetanator.novarac.com&quot;&gt;Tweetanator&lt;/a&gt;. It’s amazing to see the progress that happened in ML in the past few years and I’m looking forward to the future!&lt;/p&gt;
+
+&lt;p&gt;Thank you to people over at sentiment140 for providing the dataset and thank you for taking the time to read this! If you have any feedback please feel free to reach out via &lt;a href=&quot;https://twitter.com/novica93&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://github.com/novarac23&quot;&gt;Github&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;P.S. You probably noticed there is almost no CSS. If you feel like adding that or any other features feel free to open up a PR :)&lt;/p&gt;
+</description>
+        <pubDate>Sat, 26 Dec 2020 00:00:00 +0000</pubDate>
+        <link>http://novarac.com/data%20science%20&%20engineering/2020/12/26/tweetanator-updates.html</link>
+        <guid isPermaLink="true">http://novarac.com/data%20science%20&%20engineering/2020/12/26/tweetanator-updates.html</guid>
+        
+        
+        <category>data science &amp; engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>Prevent Overengineering</title>
+        <description>&lt;p&gt;As someone who gets very excited about complex problems I noticed I tend to over-engineer solutions. This was true when I was building apps and is true now when I’m building ML models&lt;/p&gt;
+
+&lt;p&gt;I have to frequently remind myself that complex solutions are not necessarily the best ones. If you are like me, here are a few questions that I like to ask myself to make sure I’m on the right path:&lt;/p&gt;
+
+&lt;p&gt;•  How does the thing that I'm building fit into a larger vision of the product?&lt;/p&gt;
+
+&lt;p&gt;•  What's the 20% of the work I can do that will bring us 80% of results?&lt;/p&gt;
+
+&lt;p&gt;•  If I can only build one thing what would it be?&lt;/p&gt;
+
+&lt;p&gt;•  What are critical parts of the system that have to work well and what are the ones we can polish as we go?&lt;/p&gt;
+
+&lt;p&gt;•  How can I set up a &lt;a href=&quot;https://novarac.com/feedback-loops/&quot;&gt;tight feedback loop&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;Usually after I answer a few of  the questions mentioned above I have a much clearer path forward.&lt;/p&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+        <link>http://novarac.com/data%20science%20&%20engineering/2020/02/15/overengineering-solutions.html</link>
+        <guid isPermaLink="true">http://novarac.com/data%20science%20&%20engineering/2020/02/15/overengineering-solutions.html</guid>
+        
+        
+        <category>data science &amp; engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>Feedback Loops</title>
+        <description>&lt;p&gt;One of the most effective ways to learn (for me) is to create a tight feedback loop and to keep iterating through that loop.&lt;/p&gt;
+
+&lt;p&gt;Here's a few examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If I have a machine learning model one of the best ways to get model in a decent shape is to iterate/experiment a lot. After every experiment I'd get feedback on how the model did and I'd try to improve on that.&lt;/li&gt;
+  &lt;li&gt;If I'm making a deck one of the best ways to make that deck good is to have a group of mentors review it periodically and give me constructive feedback&lt;/li&gt;
+  &lt;li&gt;If I'm learning a new skill, one of the best ways to learn that skill is to test myself constantly (aka seek feedback) and try to improve based on that.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here are a few tools that allow me to create a tight feedback loop:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jypiter notebook&lt;/li&gt;
+  &lt;li&gt;Google slides&lt;/li&gt;
+  &lt;li&gt;Coursera (has built in tests)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+        <link>http://novarac.com/data%20science%20&%20engineering/2020/01/24/feedback-loops.html</link>
+        <guid isPermaLink="true">http://novarac.com/data%20science%20&%20engineering/2020/01/24/feedback-loops.html</guid>
+        
+        
+        <category>data science &amp; engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>Lessons I Learned In 2019</title>
+        <description>&lt;p&gt;Here's a list of things I learned (or relearned in some cases) in 2019:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When you love what you do it does not feel like work&lt;/li&gt;
+  &lt;li&gt;Sometimes you have to do things you don't want to do to get to do things you want to do&lt;/li&gt;
+  &lt;li&gt;If you are doing things you don't want to be doing for a long period of time reassess your path, approach etc.&lt;/li&gt;
+  &lt;li&gt;Inaction is sometimes best course of action&lt;/li&gt;
+  &lt;li&gt;Frustration comes from unreasonable expectations, not being patient enough or worrying about things  that are out of your control&lt;/li&gt;
+  &lt;li&gt;Having a routine increases likelihood for success&lt;/li&gt;
+  &lt;li&gt;It's important to have when times you are not doing anything. Often solutions to really hard problems come when you are making a sandwich or taking a shower&lt;/li&gt;
+  &lt;li&gt;Spend more time on helping out and solving problems as opposed to judging and complaining&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+        <link>http://novarac.com/life/2019/12/30/lessons-from-2019.html</link>
+        <guid isPermaLink="true">http://novarac.com/life/2019/12/30/lessons-from-2019.html</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
+    
+  </channel>
+</rss>
