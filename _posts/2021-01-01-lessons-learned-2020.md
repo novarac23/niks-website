@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lessons I Learned In 2020
+title: Lessons Learned In 2020
 category: life
 description: Lessons I Learned In 2020
 ---
