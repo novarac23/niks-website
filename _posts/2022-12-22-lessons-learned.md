@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lessons Learns 2023
+title: Lessons Learns 2022
 category: life
 description: Lessons that I learned this year
 ---
