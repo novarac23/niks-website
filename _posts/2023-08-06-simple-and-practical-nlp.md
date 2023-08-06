@@ -5,8 +5,6 @@ category: data science & engineering
 description: My favorite simple and practical NLP techniques.
 ---
 
-# Simple & Practical NLP
-
 One of the greatest lessons I’ve learned in my professional career is that simple is almost always better. This applies to anything from data science to building presentations. NLP has been a hot topic recently and while I think large language models are pretty awesome, I find that a lot of problems can be solved with a simple and more elegant solution. Almost every app I use is trying to force using LLMs, where in reality a simple solution would probably work better. Below are some techniques that I’ve personally used plenty of times and that in a lot of cases answered questions my stakeholders had or got me 80% there.
 
 ## Word Cloud
@@ -49,9 +47,9 @@ plt.show()
 
 ![barbie_movie_review_wordcloud.png]({{ site.url }}/assets/img/barbie_movie_review_wordcloud.png)
 
-With word clouds, the bigger the word the more frequent it is in the dataset. So it looks like, on a very very high level, people think that Barbie movie is good (words like “fun”, “great” and “good” are fairly frequent). This makes sense because it aligns with the score from [rotten tomatoes](https://www.rottentomatoes.com/m/barbie)(at the time of writing its > 80%). 
+With word clouds, the bigger the word the more frequent it is in the dataset. So it looks like, on a very very high level, people think that Barbie movie is good (words like “fun”, “great” and “good” are fairly frequent). This makes sense because it aligns with the score from [rotten tomatoes](https://www.rottentomatoes.com/m/barbie) (at the time of writing its > 80%). 
 
-Of course, this is not perfect and it’s missing a lot of nuance, but if you’re in a pinch and are trying to figure out directionally what’s going on with your product/service, this is not a bad first solution while you’re working on a more complex solution. 
+Of course, this is not perfect and it’s missing a lot of nuance, but if you’re in a pinch and are trying to figure out directionally what’s going on with your product/service, this is not a bad first solution while you’re working on a more complex one. 
 
 ## Regex
 Regex is super powerful. In my experience, before building a fancy classifier model, it pays off to build a simple regex-based system. Why? Here are a few reasons:
@@ -82,7 +80,7 @@ barbie_movie_reviews[(barbie_movie_reviews['potential_negative_comment'] == True
 ...Wow, this was really bad. Here is the truth. It's boring. Plus...
 ```
 
-Here we see that a person thinks the movie is really bad. We can go down the list of potentially negative comments and address the ones that are relevant. 
+Here we see that a person thinks the movie is really bad. We can go down the list of potential negative comments and address the relevant ones. 
 
 Of course, this will flag false positives (a comment that is flagged as negative but really isn’t) but given that we want to start working on negative comments immediately this will do the job. It will also give us time to develop a more complex model if we want to go down that route. 
 
@@ -124,7 +122,7 @@ film
 barbie
 ```
 
-Here we instruct NMF to create 5 topics and explore the top words in the 4th topic. We can see that 4th topic is probably focused on actors. What can we do with this information? One thing we can do is explore each topic in-depth and understand people’s sentiments about those topics. Once we know that we might decide to respond to those people and engage with our audience.
+Here we instruct NMF to create 5 topics and explore the top words in the 4th topic. We can see that 4th topic is probably focused on actors. What can we do with this information? One thing we can do is explore each topic in-depth and understand people’s sentiments about those topics. Once we know that we might decide to respond to those people and engage with that audience.
 
 NMF and TF-IDF are not even close to perfect. For example, you have to preselect a number of topics that you want and that can be pretty finicky. However, if you put a little bit of time into it and fine-tune it, it might get you where you need to be, or at least provide a start.
 
