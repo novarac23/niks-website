@@ -47,14 +47,13 @@ plt.axis("off")
 plt.show()
 ```
 
-![barbie_movie_review_wordcloud.png](assets/img/barbie_movie_review_wordcloud.png)
+![barbie_movie_review_wordcloud.png]({{ site.url }}/assets/img/barbie_movie_review_wordcloud.png)
 
 With word clouds, the bigger the word the more frequent it is in the dataset. So it looks like, on a very very high level, people think that Barbie movie is good (words like “fun”, “great” and “good” are fairly frequent). This makes sense because it aligns with the score from [rotten tomatoes](https://www.rottentomatoes.com/m/barbie)(at the time of writing its > 80%). 
 
 Of course, this is not perfect and it’s missing a lot of nuance, but if you’re in a pinch and are trying to figure out directionally what’s going on with your product/service, this is not a bad first solution while you’re working on a more complex solution. 
 
 ## Regex
-
 Regex is super powerful. In my experience, before building a fancy classifier model, it pays off to build a simple regex-based system. Why? Here are a few reasons:
 
 - You get to deploy your solution to customers fast (if you have domain experts, you can probably build something in a few days)
@@ -88,7 +87,6 @@ Here we see that a person thinks the movie is really bad. We can go down the lis
 Of course, this will flag false positives (a comment that is flagged as negative but really isn’t) but given that we want to start working on negative comments immediately this will do the job. It will also give us time to develop a more complex model if we want to go down that route. 
 
 ## Topic Modeling
-
 Sometimes I need to go beyond word clouds and understand different topics that occur in a given collection of documents. This can be quite a task, so to get started (and sometimes this is all that I need) I use TFIDF + Non-Negative Matrix Factorization (NMF) to figure out different themes that might occur in the text I’m working with.
 
 Explaining TF-IDF and NMF is beyond the scope of this blog post, but TF-IDF is a technique to vectorize text and NMF is a fancy way of figuring out which terms are most important given you provide it with vectorized text.
@@ -131,7 +129,6 @@ Here we instruct NMF to create 5 topics and explore the top words in the 4th top
 NMF and TF-IDF are not even close to perfect. For example, you have to preselect a number of topics that you want and that can be pretty finicky. However, if you put a little bit of time into it and fine-tune it, it might get you where you need to be, or at least provide a start.
 
 ## Conclusion
-
 Those are some of my favorite simple and practical NLP techniques. I always consider those before I start throwing giant transformer models at the problem. 
 
 Do you have a favorite technique? What’s your favorite way of solving NLP problems? Feel free to reach out to me on the internet!
