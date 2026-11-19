@@ -13,6 +13,7 @@ This is Nikola's personal website at `https://novarac.com`, with independent app
 - Edit `site/scripts/build.py` for page content and markup, `site/src/templates/base.html` for the shared shell, `site/src/styles.css` for styling, and `site/site.json` for configuration.
 - Write posts in `site/content/posts/`. `site/dist/` is generated; never make source changes there. Preserve the content-based stylesheet version in the builder/template so browsers refresh changed CSS.
 - Keep the published site static. The hamburger uses native `<details>` and needs no JavaScript. Do not introduce a framework, runtime, database, dependencies, analytics, or hosted form service without a concrete user requirement.
+- Plausible analytics was explicitly authorized on November 19, 2026. Its supplied script (`https://plausible.io/js/pa-UwtZWkF9-FcmccouFEsQV.js`) and initialization live once in the shared page template. Preserve normal site functionality without analytics; do not add duplicate tracking or instrument legacy redirect pages.
 
 ## Design workflow and Impeccable
 

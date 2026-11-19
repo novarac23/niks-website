@@ -109,7 +109,8 @@ class PublicationTests(unittest.TestCase):
         self.post("escaping", title='Things <script> & "quotes"', body='## Heading\n\n<script>alert(1)</script>\n\n```html\n<b>code</b>\n```')
         self.build()
         source = (self.output / "blog/escaping/index.html").read_text()
-        self.assertNotIn("<script>", source)
+        article_source = source.split('<main id="main"', 1)[1].split('</main>', 1)[0]
+        self.assertNotIn("<script", article_source.lower())
         self.assertIn("&lt;script&gt;", source)
         self.assertIn("&lt;b&gt;code&lt;/b&gt;", source)
         self.assertEqual(Page(source).h1_count, 1)

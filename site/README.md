@@ -2,7 +2,7 @@
 
 A personal website for Nikola, named “Nik’s Website,” with a homepage, app catalog, Dotted product page, about page, and Markdown blog. The design uses white, navy, and blue, with plain headings, compact app listings, and readable articles.
 
-The published site is plain HTML, CSS, and SVG. It needs no JavaScript, runtime, database, or external fonts. Building requires Python 3.9+ and its standard library only. There are no dependencies to install.
+The published site is static HTML, CSS, and image assets. Its content and navigation work without JavaScript; the user-authorized Plausible analytics snippet loads asynchronously from the shared page template. No application server, database, or external fonts are needed. Building requires Python 3.9+ and its standard library only. There are no dependencies to install.
 
 Contact Me follows About in the navigation and opens an email to `nikola.novakovic@proton.me`. At phone widths, a native HTML disclosure replaces the desktop navigation with a keyboard-accessible hamburger menu. Opening it reveals the same links beneath the site name; the icon changes to a close button.
 
