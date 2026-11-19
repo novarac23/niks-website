@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfcfe">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="$description">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$description">
+  <meta property="og:type" content="$og_type">
+  <meta property="og:url" content="$page_url">
+  <link rel="canonical" href="$page_url">
+  <link rel="alternate" type="application/rss+xml" title="$site_name" href="${root}feed.xml">
+  $robots
+  <title>$title</title>
+  <link rel="stylesheet" href="${root}styles.css?v=$styles_version">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="$root" aria-label="$site_name home"><span>$site_name</span></a>
+    <nav class="desktop-navigation" aria-label="Main navigation">$navigation<a href="mailto:$email">Contact Me</a></nav>
+    <details class="mobile-menu">
+      <summary aria-label="Navigation menu">
+        <svg class="menu-open-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="menu-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </summary>
+      <nav aria-label="Mobile navigation">$navigation<a href="mailto:$email">Contact Me</a></nav>
+    </details>
+  </header>
+  <main id="main" class="shell">$content</main>
+  <footer class="site-footer shell"><a class="footer-name" href="$root">$site_name</a><div><span>@ $year</span></div></footer>
+</body>
+</html>

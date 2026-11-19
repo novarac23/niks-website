@@ -1,35 +1,28 @@
-[![](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/wild-flame)
+# Nik’s Website
 
-# jekyll-simple
+The personal maker site includes apps at `/apps/`, a Markdown blog at `/blog/`, and an about page. The generated static website is in [`site/dist/`](site/dist/). See [`site/README.md`](site/README.md) for writing posts, editing, and hosting instructions.
 
-## simple
-simple is a theme designed for blogger using static site generator like jekyll, Hexo etc.
+All nine existing blog posts from `niks-website` are migrated with their original dates and five referenced images. See [migration details](site/MIGRATION.md). The canonical domain is `https://novarac.com`.
 
-Especially for those who writes in both Chinese and English. The font-type setting looks really good when writers use Chinese mixed with English.
+For future contributors and coding agents, start with [AGENTS.md](AGENTS.md). [PRODUCT.md](PRODUCT.md) records the site's purpose, approved content, and redesign history; [DESIGN.md](DESIGN.md) records the current style and responsive behavior. Impeccable's design sidecar is in `.impeccable/design.json`. These files are included in the source ZIP and are repository documentation, not published pages.
 
-Supposedly, this could work with Japanese as well but never had a chance to try.
+To preview from this directory:
 
-## Story behind this theme
+```sh
+python3 site/scripts/build.py
+python3 -m http.server 8080 --directory site/dist
+```
 
-It has been long that using font with Chinese in web was a tedious and time-consuming work. It would be almost impossible to make different OS or devices to look the same.
+## Publish through the existing niks-website repository
 
-iOS 9 has pulished some new fonts in Chinese and I decided to make one theme that looks good on iOS devices, at the same time, making it acceptable on computers using other fonts.
+The replacement workflow is `.github/workflows/github-pages.yml`. It checks the site, builds it with Python, and publishes `site/dist` to GitHub Pages whenever you push to `master`, matching the existing repository's branch. It also supports a manual run from the Actions tab. The GitHub runner handles Python; the published website is static.
 
-So mobile goes first, then the macOS.
+1. Extract **`novarac-source.zip`** into the root of your existing `niks-website` checkout. The archive includes `.github/`, `site/`, and the contributor/design documentation, with Git metadata and generated files excluded. This replaces the old Jekyll workflow at the same filename. Keep the existing checkout's own `.git` directory.
+2. In the repository's **Settings → Pages**, set **Build and deployment → Source** to **GitHub Actions**. Keep the custom domain set to **novarac.com** and HTTPS enabled.
+3. Commit and push to `master`. The new workflow deploys the site automatically using GitHub's built-in token; it does not use `JEKYLL_PAT`.
 
-## ^-^
+Keep the `site/` folder at the repository root as packaged. Old Jekyll source files can remain in the repository: the new workflow publishes only the generated `site/dist/` output.
 
-You can click the button [Say Thanks!](https://saythanks.io/to/wild-flame) at the first of README if you use/like my project. :D
+For future posts, edit Markdown under `site/content/posts/`, set `draft: false`, and push. GitHub builds and publishes the update for you.
 
-Thanks you guys, I got a lot of thanks from people.
-
-- [ryan](https://saythanks.io/note/a9a342ba-e9aa-4707-b169-05b6ae49757d)
-- [Daniel Moore](https://saythanks.io/note/da81706c-8884-4dbc-89b0-eed242ac3b19) and feel free to visit his work [border quiz](http://danielmoore.us/borders-quiz?singapore-planning-areas)
-- [David Laing](https://saythanks.io/note/fb5d24eb-3be8-4f92-842b-c6dd7ce4c239)
-- [Meg](https://saythanks.io/note/6d56e228-e17c-4641-9524-9f9fd6205068)
-
-![image](https://user-images.githubusercontent.com/4491950/53502929-0d375880-3aea-11e9-9ce1-13eba2ec4643.png)
-
-- And more
-
-![image](https://user-images.githubusercontent.com/4491950/53502875-e1b46e00-3ae9-11e9-97e4-d70d038a36e9.png)
+`novarac-static.zip` contains only the prebuilt website for manual uploading. Use `novarac-source.zip` for this GitHub Actions workflow.

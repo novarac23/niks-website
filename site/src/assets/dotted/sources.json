@@ -1,0 +1,26 @@
+[
+  {
+    "file": "progress.png",
+    "source": "Dotted-Line-iOS/store_screenshots/v_1_7/raw/en/iphone/scrn_1.png",
+    "sha256": "691273a3036eb6f8f7548651d2ee1f753a014f47a68bdd7df6ce2fc31e2cefea",
+    "transformation": "Unmodified original screenshot"
+  },
+  {
+    "file": "countdown.png",
+    "source": "Dotted-Line-iOS/store_screenshots/v_1_7/raw/en/iphone/scrn_3.png",
+    "sha256": "462d3742672e21a56346c193ccaa715b3816a891613184a2c231e58c5f7427bf",
+    "transformation": "Unmodified original screenshot"
+  },
+  {
+    "file": "intention.png",
+    "source": "Dotted-Line-iOS/store_screenshots/v_1_7/raw/en/iphone/scrn_4.png",
+    "sha256": "90dfcbcbf69bc886207f1911fc65a2175037befd11a16c4d4c9f9b370797a57f",
+    "transformation": "Unmodified original screenshot"
+  },
+  {
+    "file": "widgets.png",
+    "source": "Dotted-Line-iOS/store_screenshots/v_1_7/raw/en/iphone/scrn_6.png",
+    "sha256": "e1dffa38fb47d89b1fa8862a0acf835db24e43a4e5f6d3fd6c052506ce1ff639",
+    "transformation": "Unmodified original screenshot"
+  }
+]

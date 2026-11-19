@@ -1,0 +1,191 @@
+{
+  "source_site": "https://novarac.com",
+  "source_repository": "niks-website",
+  "source_commit": "ded9d034f8017a605c69ebcfed61d17ddf8c2d46",
+  "posts": [
+    {
+      "source_file": "_posts/2019-12-30-lessons-from-2019.md",
+      "source_sha256": "fe6a97761ac3d7e37cd3fa0581361d730839cda4a2446e5340daf80aede9b1ab",
+      "target_file": "content/posts/lessons-from-2019.md",
+      "target_sha256": "9e772e3d53e818e0910c8cc13fc63cf83fe33dc3828988298cee9b404ba70d99",
+      "title": "Lessons Learned In 2019",
+      "date": "2019-12-30",
+      "category": "life",
+      "canonical_path": "/blog/lessons-from-2019/",
+      "feed_guid": "http://novarac.com/life/2019/12/30/lessons-from-2019.html",
+      "legacy_paths": [
+        "/lessons-from-2019/",
+        "/life/2019/12/30/lessons-from-2019.html"
+      ],
+      "images": []
+    },
+    {
+      "source_file": "_posts/2020-01-24-feedback-loops.md",
+      "source_sha256": "9f0c66a0e1e287d47a5880ee98f78df2d8678de506dc1887893fa1e29c5f0476",
+      "target_file": "content/posts/feedback-loops.md",
+      "target_sha256": "b63ff7e882b637d84d93399a1b35e84c5d73e89e602971794010f4d118615ef1",
+      "title": "Feedback Loops",
+      "date": "2020-01-24",
+      "category": "data science & engineering",
+      "canonical_path": "/blog/feedback-loops/",
+      "feed_guid": "http://novarac.com/data%20science%20&%20engineering/2020/01/24/feedback-loops.html",
+      "legacy_paths": [
+        "/feedback-loops/",
+        "/data%20science%20&%20engineering/2020/01/24/feedback-loops.html"
+      ],
+      "images": []
+    },
+    {
+      "source_file": "_posts/2020-02-15-overengineering-solutions.md",
+      "source_sha256": "131a9bf78cfb68dfab4ee5fb6004b97d3ce26ddd7460199a87cfa6ac1230d4bb",
+      "target_file": "content/posts/overengineering-solutions.md",
+      "target_sha256": "ba8ca1b79d604173d272a3c07c5c4ce55206928be1d3486226fae10133ca67c0",
+      "title": "Prevent Overengineering",
+      "date": "2020-02-15",
+      "category": "data science & engineering",
+      "canonical_path": "/blog/overengineering-solutions/",
+      "feed_guid": "http://novarac.com/data%20science%20&%20engineering/2020/02/15/overengineering-solutions.html",
+      "legacy_paths": [
+        "/overengineering-solutions/",
+        "/data%20science%20&%20engineering/2020/02/15/overengineering-solutions.html"
+      ],
+      "images": []
+    },
+    {
+      "source_file": "_posts/2020-12-26-tweetanator-updates.md",
+      "source_sha256": "61ccbf337545746632edfba1321c6914c8d901e7ea0a4db2eaf9a1ec54bdbee2",
+      "target_file": "content/posts/tweetanator-updates.md",
+      "target_sha256": "3576326b10c25097894c825ecca1edbd9c7a157075c6bcd2a00f028bb7af6ddb",
+      "title": "Tweetanator Updates",
+      "date": "2020-12-26",
+      "category": "data science & engineering",
+      "canonical_path": "/blog/tweetanator-updates/",
+      "feed_guid": "http://novarac.com/data%20science%20&%20engineering/2020/12/26/tweetanator-updates.html",
+      "legacy_paths": [
+        "/tweetanator-updates/",
+        "/data%20science%20&%20engineering/2020/12/26/tweetanator-updates.html"
+      ],
+      "images": [
+        "/assets/img/validation_accuracy_tweetanator.png",
+        "/assets/img/tweetanator_histogram.png"
+      ]
+    },
+    {
+      "source_file": "_posts/2021-01-01-lessons-learned-2020.md",
+      "source_sha256": "4ce952d03a29f1aedb7630d7afec0c22a253a7f6621bbe3cf58541d05553102a",
+      "target_file": "content/posts/lessons-learned-2020.md",
+      "target_sha256": "63e4948ab876a8d80b273635eab82218c00b3db3b18ac289014d5aa7f70b5c39",
+      "title": "Lessons Learned In 2020",
+      "date": "2021-01-01",
+      "category": "life",
+      "canonical_path": "/blog/lessons-learned-2020/",
+      "feed_guid": "http://novarac.com/life/2021/01/01/lessons-learned-2020.html",
+      "legacy_paths": [
+        "/lessons-learned-2020/",
+        "/life/2021/01/01/lessons-learned-2020.html"
+      ],
+      "images": []
+    },
+    {
+      "source_file": "_posts/2021-11-18-back-to-basics-stats.md",
+      "source_sha256": "ddd83b827884506ec730165d29ab48916dbb866169dbf13024b7eae015130cd9",
+      "target_file": "content/posts/back-to-basics-stats.md",
+      "target_sha256": "8a4d907411d72a7d3aa49b157c77a1080343b9ca9ea31181ca536495962547bd",
+      "title": "Back To The Basics - Statistics",
+      "date": "2021-11-18",
+      "category": "data science & engineering",
+      "canonical_path": "/blog/back-to-basics-stats/",
+      "feed_guid": "http://novarac.com/data%20science%20&%20engineering/2021/11/18/back-to-basics-stats.html",
+      "legacy_paths": [
+        "/back-to-basics-stats/",
+        "/data%20science%20&%20engineering/2021/11/18/back-to-basics-stats.html"
+      ],
+      "images": [
+        "/assets/img/house_prices_ames.png"
+      ]
+    },
+    {
+      "source_file": "_posts/2022-12-22-lessons-learned.md",
+      "source_sha256": "0af3174ff411db22e8df71cfdb89b65f5234cd865b69dd4ea427216a3d6f9c31",
+      "target_file": "content/posts/lessons-learned.md",
+      "target_sha256": "1034a5d7ae60424a5a7e7c42013ce38239537d798b2a88270ba559b79e3a5b53",
+      "title": "Lessons Learned In 2022",
+      "date": "2022-12-22",
+      "category": "life",
+      "canonical_path": "/blog/lessons-learned/",
+      "feed_guid": "http://novarac.com/life/2022/12/22/lessons-learned.html",
+      "legacy_paths": [
+        "/lessons-learned/",
+        "/life/2022/12/22/lessons-learned.html"
+      ],
+      "images": [
+        "/assets/img/whoop_chart.jpeg"
+      ]
+    },
+    {
+      "source_file": "_posts/2023-06-24-guide-on-surviving-grad-school.md",
+      "source_sha256": "83f115d28998372641a4114b4692b8a54fb115f8b3346a8a83620f80e4c045b9",
+      "target_file": "content/posts/guide-on-surviving-grad-school.md",
+      "target_sha256": "7dbe763b2a01a0715bc2e1cfbc749e88136f08e8a01054c3cf9b68e909e4a3d8",
+      "title": "Survive Grad School while working full time",
+      "date": "2023-06-24",
+      "category": "life",
+      "canonical_path": "/blog/guide-on-surviving-grad-school/",
+      "feed_guid": "http://novarac.com/life/2023/06/24/guide-on-surviving-grad-school.html",
+      "legacy_paths": [
+        "/guide-on-surviving-grad-school/",
+        "/life/2023/06/24/guide-on-surviving-grad-school.html"
+      ],
+      "images": []
+    },
+    {
+      "source_file": "_posts/2023-08-06-simple-and-practical-nlp.md",
+      "source_sha256": "91d9ef15eb011a8ae45d7646bb93551077c7574ef2e7604110f35add84737f05",
+      "target_file": "content/posts/simple-and-practical-nlp.md",
+      "target_sha256": "41e9a797b273bcccc889e5ad4e091abbcd754c522f57254fd17ef7bb0a91ec22",
+      "title": "Simple And Practical NLP",
+      "date": "2023-08-06",
+      "category": "data science & engineering",
+      "canonical_path": "/blog/simple-and-practical-nlp/",
+      "feed_guid": "http://novarac.com/data%20science%20&%20engineering/2023/08/06/simple-and-practical-nlp.html",
+      "legacy_paths": [
+        "/simple-and-practical-nlp/",
+        "/data%20science%20&%20engineering/2023/08/06/simple-and-practical-nlp.html"
+      ],
+      "images": [
+        "/assets/img/barbie_movie_review_wordcloud.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "source_file": "assets/img/validation_accuracy_tweetanator.png",
+      "target_file": "src/assets/img/validation_accuracy_tweetanator.png",
+      "sha256": "3221f19a6847eab2ca4e58c90f336a80df4f9698987a67b9561f3f15293837e3"
+    },
+    {
+      "source_file": "assets/img/tweetanator_histogram.png",
+      "target_file": "src/assets/img/tweetanator_histogram.png",
+      "sha256": "e175bf14f451d6393d3e5442ebbfab0a74e3ec3a3015562e432a994e55eed5d0"
+    },
+    {
+      "source_file": "assets/img/house_prices_ames.png",
+      "target_file": "src/assets/img/house_prices_ames.png",
+      "sha256": "bc643fde8f73bd381389742f2d53cad46247811775d31bfe5f3b3e3452800d65"
+    },
+    {
+      "source_file": "assets/img/whoop_chart.jpeg",
+      "target_file": "src/assets/img/whoop_chart.jpeg",
+      "sha256": "38c8b612ceccbe1a376b2ddaca9e28d77bc7f54e8eddd5d1f4a809f674e175a3"
+    },
+    {
+      "source_file": "assets/img/barbie_movie_review_wordcloud.png",
+      "target_file": "src/assets/img/barbie_movie_review_wordcloud.png",
+      "sha256": "1fd1a0c2897932bc86e43e2211fc31460be5ebf76c75d77e975a006f62b1a3cd"
+    }
+  ],
+  "archive_aliases": {
+    "/archive/": "/blog/",
+    "/archive.html": "/blog/"
+  }
+}

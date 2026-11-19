@@ -1,0 +1,13 @@
+{
+  "name": "Nik’s Website",
+  "site_name": "Nik’s Website",
+  "url": "https://novarac.com",
+  "person_name": "Nikola",
+  "email": "nikola.novakovic@proton.me",
+  "apps": {
+    "dotted": {
+      "website_url": "https://dotted.novarac.com",
+      "app_store_url": "https://apps.apple.com/app/id6760857931"
+    }
+  }
+}
