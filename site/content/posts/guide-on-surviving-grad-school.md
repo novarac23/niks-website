@@ -2,7 +2,6 @@
 title: Survive Grad School while working full time
 date: 2023-06-24
 description: Survive Grad School while working full time
-category: life
 draft: false
 ---
 

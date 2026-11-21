@@ -2,7 +2,6 @@
 title: Simple And Practical NLP
 date: 2023-08-06
 description: My favorite simple and practical NLP techniques.
-category: data science & engineering
 draft: false
 ---
 

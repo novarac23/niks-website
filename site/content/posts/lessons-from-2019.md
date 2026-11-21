@@ -2,7 +2,6 @@
 title: Lessons Learned In 2019
 date: 2019-12-30
 description: Lessons I Learned In 2019
-category: life
 draft: false
 ---
 

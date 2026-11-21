@@ -16,18 +16,18 @@ Imported from the local `niks-website` Jekyll repository on November 18, 2026. T
 | 2020-01-24 | Feedback Loops | `/blog/feedback-loops/` |
 | 2019-12-30 | Lessons Learned In 2019 | `/blog/lessons-from-2019/` |
 
-All nine source posts are included. Original titles, descriptions (including existing typos), categories, prose, code blocks, links, and image alt text are retained. Dates come from the original Jekyll filenames. The unpublished new-post template remains a draft.
+All nine source posts are included. Original titles, descriptions (including existing typos), prose, code blocks, links, and image alt text are retained. Dates come from the original Jekyll filenames. Categories were retained during the initial import and removed from active posts, pages, and RSS on November 21, 2026. Historical migration metadata and legacy URLs remain intact. The unpublished new-post template remains a draft.
 
 Five referenced image files are copied byte-for-byte under `src/assets/img/`. They keep their original `/assets/img/` URLs. The old repository's four unused images and theme assets were not imported.
 
 ## Adaptations for the new static site
 
-- Added explicit `date` and `draft: false` fields to the post front matter; retained the original category.
+- Added explicit `date` and `draft: false` fields to the post front matter. The importer now omits categories from generated post front matter while recording their original values for migration provenance and legacy URLs.
 - Replaced Jekyll's `{{ site.url }}` image prefix with local relative paths.
 - Updated the existing internal link to Feedback Loops to its new local `/blog/` location. External links, including historical Tweetanator and social links, are preserved as written; their destinations were not independently checked.
 - Added renderer support for the source posts' escaped apostrophes and quotes, underscore italics, Unicode bullets, and stable heading IDs.
 - Added static Python syntax highlighting. The two result blocks in Simple And Practical NLP are labeled `text` instead of `python` so their output is displayed without misleading syntax colors. The contents of all code blocks are unchanged. Target hashes in the migration manifest record the initial import, before this formatting-only edit.
-- Generated a feed at `/feed.xml` using the original post dates and categories. Imported posts retain identifiers derived from the old feed's URL configuration and Jekyll permalink pattern; item links point to the new pages. Feed content uses absolute image and link URLs.
+- Generated a feed at `/feed.xml` using the original post dates. Categories are no longer emitted. Imported posts retain identifiers derived from the old feed's URL configuration and Jekyll permalink pattern; item links point to the new pages. Feed content uses absolute image and link URLs.
 - Set canonical metadata and the sitemap to `https://novarac.com`.
 
 ## Older links

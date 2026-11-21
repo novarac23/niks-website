@@ -2,7 +2,6 @@
 title: Lessons Learned In 2022
 date: 2022-12-22
 description: Lessons that I learned this year
-category: life
 draft: false
 ---
 It\'s December and that means it\'s time to relax, decompress and reflect on lessons that I learned this year.

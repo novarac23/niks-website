@@ -2,7 +2,6 @@
 title: Prevent Overengineering
 date: 2020-02-15
 description: My thoughts on preventing overngineering
-category: data science & engineering
 draft: false
 ---
 

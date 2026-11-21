@@ -2,7 +2,6 @@
 title: Back To The Basics - Statistics
 date: 2021-11-18
 description: My thoughts on preventing overngineering
-category: data science & engineering
 draft: false
 ---
 

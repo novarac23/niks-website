@@ -72,6 +72,7 @@ The shared shell is at most 1000px wide with 40px side margins; at 700px and bel
 Section spacing is generally 40–64px, with smaller gaps inside related content. About uses explicit `photo copy` grid areas: the original portrait, up to 340px, sits on the left and the complete biography/contact article on the right, with a 48px gap. At 700px and below, it stacks photo above copy. Avoid stretching, cropping, or upscaling the original portrait beyond its useful resolution.
 
 Dotted screenshots form four columns on wide screens. At 1000px and below, the gallery scrolls horizontally with columns `min(78vw, 300px)`. Maintain natural image aspect ratios, intrinsic dimensions, alt text, keyboard focus, and native scrolling.
+Blog posts can embed this same gallery within the article’s reading width, preserving its captions and responsive behavior.
 
 Divider ownership is deliberate: header bottom and footer top; app/post lists own a top rule and separators between rows. Use `--divider: 1px solid var(--line)`. No extra rule beneath the introduction, around article headings/navigation, or around screenshot content. Author-written article rules and code borders serve their own purpose.
 
@@ -88,7 +89,7 @@ Buttons use 6px corners; portrait and code blocks use 12px; app icons use 14px i
 - **Navigation:** Home, Apps, Blog, About, Contact Me. Default links are muted; hover becomes ink; current desktop route gets a blue underline. The phone disclosure has a 44px hit target, visible focus, and hamburger/close states. Contact Me is a mail link after About.
 - **Homepage:** title, role, approved introduction, Apps, Recent posts. No hero actions or “how I work” section.
 - **App row:** actual icon, title, factual description, platforms. The whole row links to the local detail page; no separate “View app” label.
-- **Recent post row:** date left and title right, including on phones. The full Blog page keeps descriptions and reading metadata.
+- **Recent post row:** date left and title right, including on phones. The full Blog page keeps descriptions, dates, and reading times. Post categories are omitted throughout the site.
 - **Dotted detail:** real icon, personal story, website and App Store links beside each other when space permits, four original screenshots with concise captions. No feature table.
 - **Links and buttons:** underlines and visible keyboard focus; minimum 44px for navigation/action controls. Primary product action uses ink with white text; secondary action uses a restrained border. Actions wrap naturally.
 - **Code:** labeled, selectable, horizontally scrollable blocks; Python highlighting at build time and `text` fences for output. Preserve keyboard access to scrolling.

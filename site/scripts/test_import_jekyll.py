@@ -50,7 +50,7 @@ original_code = "unchanged"
         manifest = self.run_import()
         migrated = (self.target / "content/posts/example.md").read_text()
         self.assertIn("title: Original Title\ndate: 2020-01-02", migrated)
-        self.assertIn("category: data science & engineering", migrated)
+        self.assertNotIn("category:", migrated)
         self.assertIn("Here\\'s the original text.", migrated)
         self.assertIn('original_code = "unchanged"', migrated)
         self.assertIn("![chart](../../assets/img/chart.png)", migrated)

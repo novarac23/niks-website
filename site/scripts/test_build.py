@@ -116,7 +116,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(Page(source).h1_count, 1)
 
     def test_static_routes_assets_and_navigation_resolve(self):
-        self.post("sample-post", body="## Example\n\n[All apps](../../apps/) and **some writing**.")
+        self.post("sample-post", body="## Example\n\n[All apps](../../apps/) and **some writing**.\n\n::: dotted-screenshots")
         self.build()
         for path in self.output.rglob("*.html"):
             page = Page(path.read_text())
@@ -236,6 +236,22 @@ class PublicationTests(unittest.TestCase):
 
 
 class MarkdownTests(unittest.TestCase):
+    def test_dotted_gallery_is_shared_accessible_and_keeps_surrounding_prose(self):
+        from gallery import dotted_screenshots
+
+        gallery = dotted_screenshots()
+        self.assertIn(gallery, build.dotted())
+        result = render("Before\n::: dotted-screenshots\nAfter")
+        self.assertEqual(result, "<p>Before</p>\n" + gallery + "\n<p>After</p>")
+        self.assertEqual(gallery.count("<figure>"), 4)
+        self.assertIn('role="region"', gallery)
+        self.assertIn('tabindex="0"', gallery)
+        self.assertEqual(gallery.count('width="1206" height="2622"'), 4)
+
+    def test_gallery_directive_is_literal_in_code_and_inline_prose(self):
+        self.assertNotIn('class="screenshot-gallery"', render("```text\n::: dotted-screenshots\n```"))
+        self.assertEqual(render("Use ::: dotted-screenshots here."), "<p>Use ::: dotted-screenshots here.</p>")
+
     def test_supported_writing_formats(self):
         result = render("## Heading\n\nA **bold** and *italic* thought with `code`.\n\n- One\n- Two\n\n1. First\n2. Second\n\n> A quote\n\n---\n\n![An image](../../assets/blog/image.jpg)\n\n[A link](https://example.com/?a=1&b=2)")
         for expected in ('<h2 id="heading">', "<strong>bold</strong>", "<em>italic</em>", "<code>code</code>", "<ul>", "<ol>", "<blockquote>", "<hr>", 'alt="An image"', "a=1&amp;b=2"):

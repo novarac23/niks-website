@@ -2,7 +2,6 @@
 title: Tweetanator Updates
 date: 2020-12-26
 description: Updates about tweetanator
-category: data science & engineering
 draft: false
 ---
 

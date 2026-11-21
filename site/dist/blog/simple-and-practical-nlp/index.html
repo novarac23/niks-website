@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfcfe">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="My favorite simple and practical NLP techniques.">
+  <meta property="og:title" content="Simple And Practical NLP — Nik’s Website">
+  <meta property="og:description" content="My favorite simple and practical NLP techniques.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://novarac.com/blog/simple-and-practical-nlp/">
+  <link rel="canonical" href="https://novarac.com/blog/simple-and-practical-nlp/">
+  <link rel="alternate" type="application/rss+xml" title="Nik’s Website" href="../../feed.xml">
+  
+  <title>Simple And Practical NLP — Nik’s Website</title>
+  <link rel="stylesheet" href="../../styles.css?v=66d9f936f7b3">
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-UwtZWkF9-FcmccouFEsQV.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="../../" aria-label="Nik’s Website home"><span>Nik’s Website</span></a>
+    <nav class="desktop-navigation" aria-label="Main navigation"><a href="../../">Home</a><a href="../../apps/">Apps</a><a href="../../blog/" aria-current="page">Blog</a><a href="../../about/">About</a><a href="mailto:nikola.novakovic@proton.me">Contact Me</a></nav>
+    <details class="mobile-menu">
+      <summary aria-label="Navigation menu">
+        <svg class="menu-open-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="menu-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </summary>
+      <nav aria-label="Mobile navigation"><a href="../../">Home</a><a href="../../apps/">Apps</a><a href="../../blog/" aria-current="page">Blog</a><a href="../../about/">About</a><a href="mailto:nikola.novakovic@proton.me">Contact Me</a></nav>
+    </details>
+  </header>
+  <main id="main" class="shell"><div class="article-wrap"><a class="back-link" href="../">Back to the blog</a><header class="article-header"><p class="post-meta"><time datetime="2023-08-06">August 6, 2023</time><span>6 min read</span></p><h1>Simple And Practical NLP</h1><p class="article-description">My favorite simple and practical NLP techniques.</p></header><article class="prose post-body"><p>One of the greatest lessons I’ve learned in my professional career is that simple is almost always better. This applies to anything from data science to building presentations. NLP has been a hot topic recently and while I think large language models are pretty awesome, I find that a lot of problems can be solved with a simple and more elegant solution. Almost every app I use is trying to force using LLMs, where in reality a simple solution would probably work better. Below are some techniques that I’ve personally used plenty of times and that in a lot of cases answered questions my stakeholders had or got me 80% there.</p>
+<h2 id="word-cloud">Word Cloud</h2>
+<p>A humble word cloud is my go-to tool to figure out, broadly speaking, what’s going on with the text I’m working with. It gives me a sense of sentiment, potential topics, and any weirdness I should pay attention to.</p>
+<p>Barbie movie has been making the headlines recently, let’s take a look at what people think about it:</p>
+<figure class="code-block"><figcaption class="code-block-header">Python</figcaption><pre tabindex="0" role="region" aria-label="Python code"><code class="language-python"><span class="syntax-keyword">import</span> pandas <span class="syntax-keyword">as</span> pd
+
+<span class="syntax-keyword">import</span> matplotlib<span class="syntax-operator">.</span>pyplot <span class="syntax-keyword">as</span> plt
+
+<span class="syntax-keyword">from</span> wordcloud <span class="syntax-keyword">import</span> WordCloud<span class="syntax-operator">,</span> STOPWORDS
+
+<span class="syntax-comment"># load the dataset</span>
+
+<span class="syntax-comment"># dataset was downloaded from https://www.kaggle.com/datasets/ibrahimonmars/imdb-reviews-on-barbie</span>
+
+barbie_movie_reviews <span class="syntax-operator">=</span> pd<span class="syntax-operator">.</span><span class="syntax-function">read_csv</span><span class="syntax-operator">(</span><span class="syntax-string">&quot;barbie_Cleaned.csv&quot;</span><span class="syntax-operator">)</span>
+
+full_text <span class="syntax-operator">=</span> <span class="syntax-string">&quot; &quot;</span><span class="syntax-operator">.</span><span class="syntax-function">join</span><span class="syntax-operator">(</span>txt <span class="syntax-keyword">for</span> txt <span class="syntax-keyword">in</span> barbie_movie_reviews<span class="syntax-operator">.</span>text<span class="syntax-operator">)</span>
+
+<span class="syntax-comment"># modifying stopwords</span>
+
+stopwords <span class="syntax-operator">=</span> <span class="syntax-builtin">set</span><span class="syntax-operator">(</span>STOPWORDS<span class="syntax-operator">)</span>
+
+stopwords<span class="syntax-operator">.</span><span class="syntax-function">update</span><span class="syntax-operator">(</span><span class="syntax-operator">[</span><span class="syntax-string">&quot;Barbie&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;Permalink&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;film&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;movie&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;vote&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;Sign&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;review&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;found&quot;</span><span class="syntax-operator">,</span> <span class="syntax-string">&quot;helpful&quot;</span><span class="syntax-operator">]</span><span class="syntax-operator">)</span>
+
+<span class="syntax-comment"># generate a wordcloud</span>
+
+wc <span class="syntax-operator">=</span> <span class="syntax-function">WordCloud</span><span class="syntax-operator">(</span>stopwords<span class="syntax-operator">=</span>stopwords<span class="syntax-operator">)</span><span class="syntax-operator">.</span><span class="syntax-function">generate</span><span class="syntax-operator">(</span>full_text<span class="syntax-operator">)</span>
+
+plt<span class="syntax-operator">.</span><span class="syntax-function">imshow</span><span class="syntax-operator">(</span>wc<span class="syntax-operator">)</span>
+
+plt<span class="syntax-operator">.</span><span class="syntax-function">axis</span><span class="syntax-operator">(</span><span class="syntax-string">&quot;off&quot;</span><span class="syntax-operator">)</span>
+
+plt<span class="syntax-operator">.</span><span class="syntax-function">show</span><span class="syntax-operator">(</span><span class="syntax-operator">)</span></code></pre></figure>
+<p><img src="../../assets/img/barbie_movie_review_wordcloud.png" alt="barbie_movie_review_wordcloud.png" loading="lazy"></p>
+<p>With word clouds, the bigger the word the more frequent it is in the dataset. So it looks like, on a very very high level, people think that Barbie movie is good (words like “fun”, “great” and “good” are fairly frequent). This makes sense because it aligns with the score from <a href="https://www.rottentomatoes.com/m/barbie">rotten tomatoes</a> (at the time of writing its &gt; 80%).</p>
+<p>Of course, this is not perfect and it’s missing a lot of nuance, but if you’re in a pinch and are trying to figure out directionally what’s going on with your product/service, this is not a bad first solution while you’re working on a more complex one.</p>
+<h2 id="regex">Regex</h2>
+<p>Regex is super powerful. In my experience, before building a fancy classifier model, it pays off to build a simple regex-based system. Why? Here are a few reasons:</p>
+<ul><li>You get to deploy your solution to customers fast (if you have domain experts, you can probably build something in a few days)</li><li>You can use your regex solution to label your dataset</li><li>You might learn that you don’t really need a fancy classifier</li></ul>
+<p>Let’s say that we work on a team that wants to address complaints about that Barbie movie and we’d like to build a model that could help us with that. However, we have to start addressing complaints immediately and that’s exactly where regex comes in. Here’s something that might work:</p>
+<figure class="code-block"><figcaption class="code-block-header">Python</figcaption><pre tabindex="0" role="region" aria-label="Python code"><code class="language-python"><span class="syntax-comment"># this assumes you loaded the dataset from the previous step</span>
+
+<span class="syntax-keyword">import</span> re
+
+<span class="syntax-comment"># define our regex pattern</span>
+regex_pattern <span class="syntax-operator">=</span> <span class="syntax-string">r&#x27;bad|horrible|poor|horrific&#x27;</span>
+
+<span class="syntax-comment"># flag potential negative comments </span>
+barbie_movie_reviews<span class="syntax-operator">[</span><span class="syntax-string">&#x27;potential_negative_comment&#x27;</span><span class="syntax-operator">]</span> <span class="syntax-operator">=</span> barbie_movie_reviews<span class="syntax-operator">.</span>text<span class="syntax-operator">.</span>str<span class="syntax-operator">.</span><span class="syntax-function">contains</span><span class="syntax-operator">(</span>regex_pattern<span class="syntax-operator">,</span> regex<span class="syntax-operator">=</span><span class="syntax-literal">True</span><span class="syntax-operator">)</span>
+
+<span class="syntax-comment"># sample a potentially negative review</span>
+barbie_movie_reviews<span class="syntax-operator">[</span><span class="syntax-operator">(</span>barbie_movie_reviews<span class="syntax-operator">[</span><span class="syntax-string">&#x27;potential_negative_comment&#x27;</span><span class="syntax-operator">]</span> <span class="syntax-operator">==</span> <span class="syntax-literal">True</span><span class="syntax-operator">)</span><span class="syntax-operator">]</span><span class="syntax-operator">[</span><span class="syntax-string">&#x27;text&#x27;</span><span class="syntax-operator">]</span><span class="syntax-operator">.</span><span class="syntax-function">sample</span><span class="syntax-operator">(</span><span class="syntax-number">1</span><span class="syntax-operator">)</span><span class="syntax-operator">.</span><span class="syntax-function">to_list</span><span class="syntax-operator">(</span><span class="syntax-operator">)</span> </code></pre></figure>
+<figure class="code-block"><figcaption class="code-block-header">Output</figcaption><pre tabindex="0" role="region" aria-label="Output code"><code class="language-text"># here&#x27;s the part of text that got flagged
+...Wow, this was really bad. Here is the truth. It&#x27;s boring. Plus...</code></pre></figure>
+<p>Here we see that a person thinks the movie is really bad. We can go down the list of potential negative comments and address the relevant ones.</p>
+<p>Of course, this will flag false positives (a comment that is flagged as negative but really isn’t) but given that we want to start working on negative comments immediately this will do the job. It will also give us time to develop a more complex model if we want to go down that route.</p>
+<h2 id="topic-modeling">Topic Modeling</h2>
+<p>Sometimes I need to go beyond word clouds and understand different topics that occur in a given collection of documents. This can be quite a task, so to get started (and sometimes this is all that I need) I use TFIDF + Non-Negative Matrix Factorization (NMF) to figure out different themes that might occur in the text I’m working with.</p>
+<p>Explaining TF-IDF and NMF is beyond the scope of this blog post, but TF-IDF is a technique to vectorize text and NMF is a fancy way of figuring out which terms are most important given you provide it with vectorized text.</p>
+<figure class="code-block"><figcaption class="code-block-header">Python</figcaption><pre tabindex="0" role="region" aria-label="Python code"><code class="language-python"><span class="syntax-keyword">from</span> sklearn<span class="syntax-operator">.</span>decomposition <span class="syntax-keyword">import</span> NMF
+<span class="syntax-keyword">from</span> sklearn<span class="syntax-operator">.</span>feature_extraction<span class="syntax-operator">.</span>text <span class="syntax-keyword">import</span> TfidfVectorizer
+
+<span class="syntax-comment"># we have to vectorize our text before we use NMP</span>
+tfidf_vect <span class="syntax-operator">=</span> <span class="syntax-function">TfidfVectorizer</span><span class="syntax-operator">(</span>max_df<span class="syntax-operator">=</span><span class="syntax-number">0.8</span><span class="syntax-operator">,</span> min_df<span class="syntax-operator">=</span><span class="syntax-number">2</span><span class="syntax-operator">,</span> stop_words<span class="syntax-operator">=</span><span class="syntax-string">&#x27;english&#x27;</span><span class="syntax-operator">)</span>
+doc_term_matrix <span class="syntax-operator">=</span> tfidf_vect<span class="syntax-operator">.</span><span class="syntax-function">fit_transform</span><span class="syntax-operator">(</span>barbie_movie_reviews<span class="syntax-operator">[</span><span class="syntax-string">&#x27;text&#x27;</span><span class="syntax-operator">]</span><span class="syntax-operator">.</span>values<span class="syntax-operator">)</span>
+
+<span class="syntax-comment"># create five topics using NMF</span>
+nmf <span class="syntax-operator">=</span> <span class="syntax-function">NMF</span><span class="syntax-operator">(</span>n_components<span class="syntax-operator">=</span><span class="syntax-number">5</span><span class="syntax-operator">)</span>
+nmf<span class="syntax-operator">.</span><span class="syntax-function">fit</span><span class="syntax-operator">(</span>doc_term_matrix<span class="syntax-operator">)</span>
+
+<span class="syntax-comment"># extract &amp; print top 10 words from third topic</span>
+fourth_topic <span class="syntax-operator">=</span> nmf<span class="syntax-operator">.</span>components_<span class="syntax-operator">[</span><span class="syntax-number">3</span><span class="syntax-operator">]</span>
+top_topic_words <span class="syntax-operator">=</span> fourth_topic<span class="syntax-operator">.</span><span class="syntax-function">argsort</span><span class="syntax-operator">(</span><span class="syntax-operator">)</span><span class="syntax-operator">[</span><span class="syntax-operator">-</span><span class="syntax-number">10</span><span class="syntax-operator">:</span><span class="syntax-operator">]</span>
+
+<span class="syntax-keyword">for</span> i <span class="syntax-keyword">in</span> top_topic_words<span class="syntax-operator">:</span>
+    <span class="syntax-builtin">print</span><span class="syntax-operator">(</span>tfidf_vect<span class="syntax-operator">.</span><span class="syntax-function">get_feature_names_out</span><span class="syntax-operator">(</span><span class="syntax-operator">)</span><span class="syntax-operator">[</span>i<span class="syntax-operator">]</span><span class="syntax-operator">)</span></code></pre></figure>
+<figure class="code-block"><figcaption class="code-block-header">Output</figcaption><pre tabindex="0" role="region" aria-label="Output code"><code class="language-text">gosling
+margot
+greta
+robbie
+real
+gerwig
+ken
+world
+film
+barbie</code></pre></figure>
+<p>Here we instruct NMF to create 5 topics and explore the top words in the 4th topic. We can see that 4th topic is probably focused on actors. What can we do with this information? One thing we can do is explore each topic in-depth and understand people’s sentiments about those topics. Once we know that we might decide to respond to those people and engage with that audience.</p>
+<p>NMF and TF-IDF are not even close to perfect. For example, you have to preselect a number of topics that you want and that can be pretty finicky. However, if you put some time into it and fine-tune it, it might get you where you need to be, or at least provide a start.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Those are some of my favorite simple and practical NLP techniques. I always consider those before I start throwing giant transformer models at the problem.</p>
+<p>Do you have a favorite technique? What’s your favorite way of solving NLP problems? Feel free to reach out to me on the internet!</p></article><footer class="article-footer"><a class="plain-link" href="mailto:nikola.novakovic@proton.me">Email me about this post</a><a class="back-link" href="../">Back to the blog</a></footer></div></main>
+  <footer class="site-footer shell"><a class="footer-name" href="../../">Nik’s Website</a><div><span>@ 2026</span></div></footer>
+</body>
+</html>

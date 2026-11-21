@@ -2,7 +2,6 @@
 title: Feedback Loops
 date: 2020-01-24
 description: My thoughts on feedback loops
-category: data science & engineering
 draft: false
 ---
 

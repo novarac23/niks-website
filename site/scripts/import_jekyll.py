@@ -92,7 +92,7 @@ def import_posts(source, destination=ROOT):
         body = re.sub(r"\]\((https?://[^\s)]+)\)", internal_link, body)
         meta = record["meta"]
         header = (f"---\ntitle: {meta['title']}\ndate: {record['date']}\n"
-                  f"description: {meta['description']}\ncategory: {meta['category']}\ndraft: false\n---\n")
+                  f"description: {meta['description']}\ndraft: false\n---\n")
         target = f"content/posts/{record['slug']}.md"
         content = (header + body).encode("utf-8")
         writes[target] = content

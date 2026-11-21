@@ -2,7 +2,6 @@
 title: Lessons Learned In 2020
 date: 2021-01-01
 description: Lessons I Learned In 2020
-category: life
 draft: false
 ---
 

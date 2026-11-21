@@ -30,7 +30,7 @@ Check the affected desktop and phone layouts in one bounded pass when browser pr
 - All contact links use the configured address, currently `nikola.novakovic@proton.me`. The user accepted publishing it. Do not replace it with an alias or form without being asked.
 - Footer: site name on the left; `@ YEAR` on the right, generated from the current year. The literal `@` is intentional. No footer Email link, personal name, or company attribution.
 - Homepage: introduction, Apps, Recent posts. No hero buttons, rule beneath the introduction, decorative illustration, or “how I work” section.
-- Recent posts: date left, title right, three latest posts. No subtitles, categories, or reading times in this homepage list. The full Blog page retains its summaries and metadata.
+- Recent posts: date left, title right, three latest posts. No subtitles or reading times in this homepage list. The full Blog page retains its summaries, dates, and reading times. Posts have no categories in front matter, pages, or RSS; preserve historical migration records and category-based legacy URLs.
 - App rows link to local `/apps/dotted/`; no redundant “View app” label. Dotted's detail page links to both its marketing site and the App Store, and shows four real screenshots instead of a feature list.
 - About: heading above the layout, portrait left and all biography/contact copy right on desktop. At 700px and below, the portrait may stack above the text. Preserve the X link.
 - Avoid diminutive filler such as “little” in new general site copy. The user's approved Dotted story intentionally says “how little time we have”; retain that exception and do not silently rewrite author content.

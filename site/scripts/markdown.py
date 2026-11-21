@@ -11,6 +11,7 @@ import string
 from urllib.parse import urlsplit
 
 from highlight import code_block
+from gallery import dotted_screenshots
 
 
 def safe_url(value, image=False):
@@ -55,11 +56,15 @@ def render(text):
     heading_ids = {}
 
     def special(line):
-        return re.match(r"\s*(?:#{1,6}\s|```|>|[-*+•]\s|\d+\.\s|---\s*$|\*\*\*\s*$)", line)
+        return line.strip() == "::: dotted-screenshots" or re.match(r"\s*(?:#{1,6}\s|```|>|[-*+•]\s|\d+\.\s|---\s*$|\*\*\*\s*$)", line)
 
     while index < len(lines):
         line = lines[index]
         if not line.strip():
+            index += 1
+            continue
+        if line.strip() == "::: dotted-screenshots":
+            output.append(dotted_screenshots())
             index += 1
             continue
         fence = re.match(r"^```([a-zA-Z0-9_-]*)\s*$", line)

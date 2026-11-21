@@ -37,11 +37,15 @@ Visit http://localhost:8080. Rebuild and refresh after editing source or posts.
 
 The nine existing posts from novarac.com are imported and published in the generated site. `first-post.md` remains an unpublished writing template. See [the migration notes](MIGRATION.md) for the source inventory and compatibility URLs.
 
+Posts do not use categories. Supported front matter fields are `title`, `date`, `description`, and `draft`.
+
 ### Supported Markdown
 
 Paragraphs, headings (with linkable IDs), **bold**, *italics* using asterisks or underscores, inline code, links, images, flat ordered/unordered lists, blockquotes, horizontal rules, escaped punctuation, and triple-backtick code fences. Raw HTML is escaped. Tables, nested lists, footnotes, embedded HTML, and full CommonMark syntax are outside the small renderer's supported subset.
 
 Put post images in `content/images/`. They are copied to `dist/assets/blog/`. Reference them from a post with `![Useful description](../../assets/blog/my-image.jpg)`.
+
+To embed the same four screenshots, captions, and responsive gallery used on Dotted’s app page, put `::: dotted-screenshots` on its own line between paragraphs. This is a specific build-time embed; arbitrary HTML remains escaped.
 
 ### Code examples
 

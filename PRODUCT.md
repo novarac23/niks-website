@@ -37,6 +37,8 @@ The old site's nine posts and their five referenced images were migrated without
 
 Directory index pages, a 404 page, and 20 legacy redirect pages support static hosting. New posts enter the homepage, Blog page, RSS, and sitemap after rebuilding. Draft and future-dated posts are excluded. Blog code is highlighted during the build. The native hamburger and screenshot scrolling require no JavaScript. Plausible analytics is an explicitly requested external script in the shared page template; analytics does not change the static hosting model or the ability to use the site without JavaScript.
 
+Posts have no categories. Blog listings and article headers show dates and reading times; RSS items omit categories. Original category information remains only in migration records and legacy URLs for compatibility.
+
 Contact is `nikola.novakovic@proton.me`. X is `https://x.com/novica93`. Keep these configurable or explicitly authored; do not invent replacements.
 
 ## Brand Commitments

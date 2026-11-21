@@ -16,6 +16,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 import xml.etree.ElementTree as ET
 
 from markdown import render
+from gallery import dotted_screenshots
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "src"
@@ -39,7 +40,7 @@ def read_posts(include_drafts=False):
             if not line.strip() or line.lstrip().startswith("#"):
                 continue
             key, separator, value = line.partition(":")
-            if not separator or key.strip() not in ("title", "date", "description", "draft", "category"):
+            if not separator or key.strip() not in ("title", "date", "description", "draft"):
                 raise ValueError(f"{path.name}: unsupported front matter line: {line}")
             key, value = key.strip(), value.strip()
             if key in meta:
@@ -65,11 +66,6 @@ def read_posts(include_drafts=False):
 
 def pretty_date(value):
     return f"{value:%B} {value.day}, {value.year}"
-
-
-def category_label(post):
-    category = post.get("category")
-    return f' · <span class="post-category">{escape(category)}</span>' if category else ""
 
 
 def external_icon():
@@ -106,7 +102,7 @@ def post_list(posts, root="./", limit=None, compact=False):
         if compact:
             rows.append(f'''<a class="post-row post-row--compact" href="{root}blog/{post['slug']}/"><time class="post-meta" datetime="{post['published'].isoformat()}">{pretty_date(post['published'])}</time><div class="post-summary"><h3>{escape(post['title'])}{(' ' + draft) if draft else ''}</h3></div></a>''')
             continue
-        rows.append(f'''<a class="post-row" href="{root}blog/{post['slug']}/"><div class="post-meta"><time datetime="{post['published'].isoformat()}">{pretty_date(post['published'])}</time><span>{post['minutes']} min read{category_label(post)} {draft}</span></div><div class="post-summary"><h3>{escape(post['title'])}</h3><p>{escape(post['description'])}</p></div></a>''')
+        rows.append(f'''<a class="post-row" href="{root}blog/{post['slug']}/"><div class="post-meta"><time datetime="{post['published'].isoformat()}">{pretty_date(post['published'])}</time><span>{post['minutes']} min read {draft}</span></div><div class="post-summary"><h3>{escape(post['title'])}</h3><p>{escape(post['description'])}</p></div></a>''')
     return "".join(rows)
 
 
@@ -127,14 +123,8 @@ def dotted(website_url=None, app_store_url=None):
     if app_store_url:
         links.append(f'<a class="button button-secondary" href="{escape(app_store_url, quote=True)}">View on the App Store {external_icon()}</a>')
     actions = '<div class="product-actions">' + ''.join(links) + '</div>' if links else ''
-    screenshots = (
-        ("progress", "Time in dots", "Dotted’s progress screen showing the year, month, week, and day as rows of dots."),
-        ("countdown", "Countdowns", "Dotted counting down 47 days to a trip to Lisbon."),
-        ("intention", "Daily intentions", "Dotted’s daily intention screen with the words ‘Be brave.’"),
-        ("widgets", "Home Screen widgets", "Dotted’s Home Screen widgets showing time progress, age, a countdown to Lisbon, and a daily intention."),
-    )
-    gallery = ''.join(f'<figure><img src="../../assets/dotted/{name}.png" width="1206" height="2622" alt="{escape(alt, quote=True)}" loading="lazy" decoding="async"><figcaption>{caption}</figcaption></figure>' for name, caption, alt in screenshots)
-    return f'''<a class="back-link" href="../">Back to apps</a><section class="product-hero"><div class="product-title"><img class="app-icon" src="../../assets/dotted-icon.png" width="80" height="80" alt=""><div><h1>Dotted</h1><p class="platforms">iPhone, iPad, and Mac</p></div></div><p class="product-description">After my son was born, I quickly realized how little time we have on this earth and how quickly it passes. I built Dotted to remind myself of that and to live each day with intention.</p>{actions}</section><section class="product-screenshots" aria-labelledby="screenshots-heading"><h2 id="screenshots-heading">Screenshots</h2><div class="screenshot-gallery" role="region" aria-label="Dotted screenshots, scroll horizontally for more" tabindex="0">{gallery}</div></section><p class="page-note">Questions about Dotted? <a href="mailto:{{email}}">Email me.</a></p>'''
+    gallery = dotted_screenshots()
+    return f'''<a class="back-link" href="../">Back to apps</a><section class="product-hero"><div class="product-title"><img class="app-icon" src="../../assets/dotted-icon.png" width="80" height="80" alt=""><div><h1>Dotted</h1><p class="platforms">iPhone, iPad, and Mac</p></div></div><p class="product-description">After my son was born, I quickly realized how little time we have on this earth and how quickly it passes. I built Dotted to remind myself of that and to live each day with intention.</p>{actions}</section><section class="product-screenshots" aria-labelledby="screenshots-heading"><h2 id="screenshots-heading">Screenshots</h2>{gallery}</section><p class="page-note">Questions about Dotted? <a href="mailto:{{email}}">Email me.</a></p>'''
 
 
 def blog(posts):
@@ -147,7 +137,7 @@ def about(person_name):
 
 def article(post):
     notice = '<p class="draft-notice">Draft preview — this post is excluded from the normal build.</p>' if post["draft"] else ""
-    return f'''<div class="article-wrap"><a class="back-link" href="../">Back to the blog</a>{notice}<header class="article-header"><p class="post-meta"><time datetime="{post['published'].isoformat()}">{pretty_date(post['published'])}</time><span>{post['minutes']} min read{category_label(post)}</span></p><h1>{escape(post['title'])}</h1><p class="article-description">{escape(post['description'])}</p></header><article class="prose post-body">{post['body']}</article><footer class="article-footer"><a class="plain-link" href="mailto:{{email}}">Email me about this post</a><a class="back-link" href="../">Back to the blog</a></footer></div>'''
+    return f'''<div class="article-wrap"><a class="back-link" href="../">Back to the blog</a>{notice}<header class="article-header"><p class="post-meta"><time datetime="{post['published'].isoformat()}">{pretty_date(post['published'])}</time><span>{post['minutes']} min read</span></p><h1>{escape(post['title'])}</h1><p class="article-description">{escape(post['description'])}</p></header><article class="prose post-body">{post['body']}</article><footer class="article-footer"><a class="plain-link" href="mailto:{{email}}">Email me about this post</a><a class="back-link" href="../">Back to the blog</a></footer></div>'''
 
 
 def migration_aliases(posts):
@@ -203,8 +193,6 @@ def write_feed(staging, posts, config):
         ET.SubElement(item, "guid", isPermaLink="true").text = original_guids.get(f"/blog/{post['slug']}/") or url
         timestamp = datetime.combine(post["published"], datetime.min.time(), tzinfo=timezone.utc)
         ET.SubElement(item, "pubDate").text = format_datetime(timestamp, usegmt=True)
-        if post.get("category"):
-            ET.SubElement(item, "category").text = post["category"]
         body = re.sub(r'(href|src)="([^"]+)"', lambda match:
                       f'{match[1]}="{escape(urljoin(url, unescape(match[2])), quote=True)}"', post["body"])
         ET.SubElement(item, "description").text = body

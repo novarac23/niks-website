@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfcfe">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="Updates about tweetanator">
+  <meta property="og:title" content="Tweetanator Updates — Nik’s Website">
+  <meta property="og:description" content="Updates about tweetanator">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://novarac.com/blog/tweetanator-updates/">
+  <link rel="canonical" href="https://novarac.com/blog/tweetanator-updates/">
+  <link rel="alternate" type="application/rss+xml" title="Nik’s Website" href="../../feed.xml">
+  
+  <title>Tweetanator Updates — Nik’s Website</title>
+  <link rel="stylesheet" href="../../styles.css?v=66d9f936f7b3">
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-UwtZWkF9-FcmccouFEsQV.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="../../" aria-label="Nik’s Website home"><span>Nik’s Website</span></a>
+    <nav class="desktop-navigation" aria-label="Main navigation"><a href="../../">Home</a><a href="../../apps/">Apps</a><a href="../../blog/" aria-current="page">Blog</a><a href="../../about/">About</a><a href="mailto:nikola.novakovic@proton.me">Contact Me</a></nav>
+    <details class="mobile-menu">
+      <summary aria-label="Navigation menu">
+        <svg class="menu-open-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="menu-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </summary>
+      <nav aria-label="Mobile navigation"><a href="../../">Home</a><a href="../../apps/">Apps</a><a href="../../blog/" aria-current="page">Blog</a><a href="../../about/">About</a><a href="mailto:nikola.novakovic@proton.me">Contact Me</a></nav>
+    </details>
+  </header>
+  <main id="main" class="shell"><div class="article-wrap"><a class="back-link" href="../">Back to the blog</a><header class="article-header"><p class="post-meta"><time datetime="2020-12-26">December 26, 2020</time><span>3 min read</span></p><h1>Tweetanator Updates</h1><p class="article-description">Updates about tweetanator</p></header><article class="prose post-body"><p>I recently made a few updates to one of my old projects called Tweetanator. Original idea was to create a chrome plugin that would allow users to filter their Twitter feeds based on a sentiment. I quickly realized that would involve writing a decent amount of Javascript and decided not to go down that route :)</p>
+<p>Instead I ended up creating a simple flask app where users had to type out their tweet and the app would determine the sentiment of the tweet. That was a few years ago and as we all know in the ML world a few years means it's actually very old. I thought it would be cool to train a new model and add a few features to the app.</p>
+<p>If you don't want to read about the updates and just want to check out the app here's the link: <a href="https://tweetanator.novarac.com">https://tweetanator.novarac.com</a></p>
+<h2 id="updates">Updates</h2>
+<h3 id="model">Model</h3>
+<p>For a new model I ended up going with a simple LSTM network. Model was trained on <a href="http://help.sentiment140.com/for-students">sentiment140</a> dataset. Here's the train/validation accuracy graph (blue line is training, orange is validation):</p>
+<p><img src="../../assets/img/validation_accuracy_tweetanator.png" alt="validation_accuracy" loading="lazy"></p>
+<p>Results shown above were after 30 epochs. These are not SOTA numbers and an LSTM network is not a cutting edge model, but they are good enough for Tweetanator.</p>
+<h3 id="app">App </h3>
+<p>I added one major feature to the app. Users can now search Twitter for a specific topic and get a sentiment analysis breakdown of the results. Here's an example of how that looks like:</p>
+<p><img src="../../assets/img/tweetanator_histogram.png" alt="histogram" loading="lazy"></p>
+<p>I also added a separate page for the old functionality of the app (type out the tweet and get the sentiment).</p>
+<h2 id="closing-thoughts">Closing thoughts</h2>
+<p>I had a lot of fun updating <a href="https://tweetanator.novarac.com">Tweetanator</a>. It's amazing to see the progress that happened in ML in the past few years and I'm looking forward to the future!</p>
+<p>Thank you to people over at sentiment140 for providing the dataset and thank you for taking the time to read this! If you have any feedback please feel free to reach out via <a href="https://twitter.com/novica93">Twitter</a> or <a href="https://github.com/novarac23">Github</a>!</p>
+<p>P.S. You probably noticed there is almost no CSS. If you feel like adding that or any other features feel free to open up a PR :)</p></article><footer class="article-footer"><a class="plain-link" href="mailto:nikola.novakovic@proton.me">Email me about this post</a><a class="back-link" href="../">Back to the blog</a></footer></div></main>
+  <footer class="site-footer shell"><a class="footer-name" href="../../">Nik’s Website</a><div><span>@ 2026</span></div></footer>
+</body>
+</html>
