@@ -1,0 +1,324 @@
+{
+  "checked_at_utc": "2026-11-24T16:14:33.360899+00:00",
+  "scope": {
+    "repository": "niks-website",
+    "domain": "https://novarac.com",
+    "conversion": "Dotted App Store visits; downloads and purchase attribution not measured",
+    "external_read_only": "https://dotted.novarac.com/"
+  },
+  "live_sitemap_pages": [
+    {
+      "url": "https://novarac.com/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Nik\u2019s Website \u2014 Apps, writing, and things I\u2019m learning.",
+      "canonical": [
+        "https://novarac.com/"
+      ],
+      "robots": [],
+      "body_sha256": "dc10a90cbaf28f347bcd466c6483b1daadafbd92b83a54ba3bd8eeb860633646"
+    },
+    {
+      "url": "https://novarac.com/apps/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Apps \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/apps/"
+      ],
+      "robots": [],
+      "body_sha256": "4fc04606929dfb0fa87a525e108aa0529948b8ba22e466a093b768160029dbbf"
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Dotted \u2014 Time in dots",
+      "canonical": [
+        "https://novarac.com/apps/dotted/"
+      ],
+      "robots": [],
+      "body_sha256": "dea3caa11bffe7f9a03132c229afd0c28daed0b41a3d8396401ee61bb17872bf"
+    },
+    {
+      "url": "https://novarac.com/blog/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Blog \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/"
+      ],
+      "robots": [],
+      "body_sha256": "bc635ce31c26a8f63b93688beff0f0b9081ca01b3c84379f16c5b56ad1dee255"
+    },
+    {
+      "url": "https://novarac.com/about/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "About \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/about/"
+      ],
+      "robots": [],
+      "body_sha256": "49bb8ae600e112b2c5850125c6b8f325b5a6ddbaba932c7e7276f55e09c944e2"
+    },
+    {
+      "url": "https://novarac.com/blog/2026-11-21-comeback/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Self-employed \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/2026-11-21-comeback/"
+      ],
+      "robots": [],
+      "body_sha256": "4a4a9692b839e416befcb2f80e2b13f16d17b54654c06550bf61a6cc4e0506a5"
+    },
+    {
+      "url": "https://novarac.com/blog/simple-and-practical-nlp/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Simple And Practical NLP \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/simple-and-practical-nlp/"
+      ],
+      "robots": [],
+      "body_sha256": "c34bc9a29d1b0e191ea50abc6059bc30ec5d7d6cfdd5d5fcb3c6fe2c3b4e6359"
+    },
+    {
+      "url": "https://novarac.com/blog/guide-on-surviving-grad-school/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Survive Grad School while working full time \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/guide-on-surviving-grad-school/"
+      ],
+      "robots": [],
+      "body_sha256": "6c72aaea9a366f42ecf8777402d3a2d63d9d101a6c0d50ef39d1b59de40a5fb1"
+    },
+    {
+      "url": "https://novarac.com/blog/lessons-learned/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Lessons Learned In 2022 \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/lessons-learned/"
+      ],
+      "robots": [],
+      "body_sha256": "7cd81292dca00046d5de06bdc9ba604c2ae18afd757435c2aaa21dec61fc215d"
+    },
+    {
+      "url": "https://novarac.com/blog/back-to-basics-stats/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Back To The Basics - Statistics \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/back-to-basics-stats/"
+      ],
+      "robots": [],
+      "body_sha256": "9026d12a2d554c7adf2175fb8693dd1bbb8d01726e728a3adf4531d2ac273d81"
+    },
+    {
+      "url": "https://novarac.com/blog/lessons-learned-2020/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Lessons Learned In 2020 \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/lessons-learned-2020/"
+      ],
+      "robots": [],
+      "body_sha256": "2521aa080547b7d40174079ef4aa6cde78cc6dc834b069c53256e4078d9736cb"
+    },
+    {
+      "url": "https://novarac.com/blog/tweetanator-updates/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Tweetanator Updates \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/tweetanator-updates/"
+      ],
+      "robots": [],
+      "body_sha256": "2585324a0828a9d7dce16115fc77a24872b7f5fee44b2e834bf4a0948759e574"
+    },
+    {
+      "url": "https://novarac.com/blog/overengineering-solutions/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Prevent Overengineering \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/overengineering-solutions/"
+      ],
+      "robots": [],
+      "body_sha256": "fd2bfcfadb9db281c557d3cad4558630e03fa22b560a867060228e7c86c56c48"
+    },
+    {
+      "url": "https://novarac.com/blog/feedback-loops/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Feedback Loops \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/feedback-loops/"
+      ],
+      "robots": [],
+      "body_sha256": "9b0a41bd8b103d046813451d28b74492c48bf491cf9b37e0dbf84bc887b6f5e1"
+    },
+    {
+      "url": "https://novarac.com/blog/lessons-from-2019/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "title": "Lessons Learned In 2019 \u2014 Nik\u2019s Website",
+      "canonical": [
+        "https://novarac.com/blog/lessons-from-2019/"
+      ],
+      "robots": [],
+      "body_sha256": "92b583b4c8188cd473f3e4d6e297e1b7fefc5bf443a8a4ae89fe480c9585c365"
+    }
+  ],
+  "live_crawl": {
+    "main_robots": "User-agent: *\nAllow: /\n\nSitemap: https://novarac.com/sitemap.xml\n",
+    "marketing_robots": "User-agent: *\nAllow: /\n\nSitemap: https://dotted.novarac.com/sitemap.xml\n",
+    "main_unknown_path_status": 404,
+    "marketing_unknown_path_status": 404,
+    "http_redirect": {
+      "from": "http://novarac.com/",
+      "to": "https://novarac.com/",
+      "status_chain": [
+        301,
+        200
+      ]
+    },
+    "www_redirect": {
+      "from": "https://www.novarac.com/",
+      "to": "https://novarac.com/",
+      "status_chain": [
+        301,
+        200
+      ]
+    },
+    "query_canonical": [
+      "https://novarac.com/apps/dotted/"
+    ]
+  },
+  "crawler_user_agent_checks": [
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "user_agent": "Googlebot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "user_agent": "Bingbot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "user_agent": "GPTBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "user_agent": "OAI-SearchBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "user_agent": "PerplexityBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "user_agent": "ClaudeBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://dotted.novarac.com/",
+      "user_agent": "GPTBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://dotted.novarac.com/",
+      "user_agent": "OAI-SearchBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://dotted.novarac.com/",
+      "user_agent": "PerplexityBot",
+      "http_status": 200,
+      "html_matches_default": true
+    },
+    {
+      "url": "https://dotted.novarac.com/",
+      "user_agent": "ClaudeBot",
+      "http_status": 200,
+      "html_matches_default": true
+    }
+  ],
+  "marketing_locale_sets": [
+    {
+      "alternates": {
+        "en": "https://dotted.novarac.com/",
+        "de": "https://dotted.novarac.com/de/",
+        "x-default": "https://dotted.novarac.com/"
+      },
+      "reciprocal": true,
+      "http_status": 200
+    },
+    {
+      "alternates": {
+        "en": "https://dotted.novarac.com/support/",
+        "de": "https://dotted.novarac.com/de/support/",
+        "x-default": "https://dotted.novarac.com/support/"
+      },
+      "reciprocal": true,
+      "http_status": 200
+    },
+    {
+      "alternates": {
+        "en": "https://dotted.novarac.com/privacy/",
+        "de": "https://dotted.novarac.com/de/privacy/",
+        "x-default": "https://dotted.novarac.com/privacy/"
+      },
+      "reciprocal": true,
+      "http_status": 200
+    }
+  ],
+  "internal_links": {
+    "target": "https://novarac.com/apps/dotted/",
+    "before": 2,
+    "after_local": 3,
+    "after_deployed": null,
+    "sources_after_local": [
+      "https://novarac.com/",
+      "https://novarac.com/apps/",
+      "https://novarac.com/blog/2026-11-21-comeback/"
+    ]
+  },
+  "official_product_evidence": {
+    "url": "https://apps.apple.com/us/app/visual-time-dotted-line/id6760857931",
+    "checked_on": "2026-11-24",
+    "summary": "Core app is free on iPhone and iPad. A one-time Premium purchase unlocks widgets, custom colors, and the Mac app. No subscription. Storefront-specific price not copied into site code."
+  },
+  "verification_limits": [
+    "No connected Search Console; indexation, clicks, impressions, and actual Google canonical selection unverified.",
+    "Ahrefs available but not installed/connected; DR, organic keyword counts, and clean referring-domain gaps unmeasured.",
+    "Spoofed user-agent responses show access from this network; they do not prove a real crawler has visited or indexed the page.",
+    "No browser preview tools; desktop/mobile above-the-fold placement not visually verified.",
+    "Search-tool site queries returned no app-page matches; this does not prove deindexation.",
+    "SafeSearch on/off comparison unavailable; no UGC or obvious adult media in this repository.",
+    "No changes pushed, PR opened, or deployment performed."
+  ],
+  "local_validation": {
+    "sitemap_pages": 15,
+    "all_canonicals_match": true,
+    "all_links_and_assets_resolve": true,
+    "legacy_redirect_count": 20,
+    "tests": "30 passed"
+  }
+}

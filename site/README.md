@@ -70,7 +70,7 @@ All routes are generated as real directory index files, so direct links and brow
 
 `/apps/` remains the catalog on novarac.com. An app's own website can live separately, for example at `dotted.novarac.com` pointing to the existing Render service.
 
-`apps.dotted.website_url` in `site.json` is currently `https://dotted.novarac.com`. The “Visit Dotted’s website” link on `/apps/dotted/` uses this setting. Beside it, “View on the App Store” uses `apps.dotted.app_store_url`, taken from the Dotted app's existing share link (`https://apps.apple.com/app/id6760857931`). Each URL can be set to `null` to hide its link. The cards on the homepage and Apps page lead to the local `/apps/dotted/` overview.
+`apps.dotted.website_url` in `site.json` is currently `https://dotted.novarac.com`. The “Visit Dotted Line’s website” link on `/apps/dotted/` uses this setting. Beside it, “View on the App Store” uses `apps.dotted.app_store_url`, taken from the Dotted app's existing share link (`https://apps.apple.com/app/id6760857931`). Each URL can be set to `null` to hide its link. The cards on the homepage and Apps page lead to the local `/apps/dotted/` overview.
 
 The custom subdomain is configured separately: add it to the Dotted service in Render, then add a `dotted` CNAME record pointing to the hostname Render provides at the domain's active DNS provider. This does not require hosting Dotted within the personal website. DNS and Render settings have not been changed.
 

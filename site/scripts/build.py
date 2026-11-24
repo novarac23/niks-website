@@ -77,19 +77,19 @@ def configured_app_url(config, key):
     if value is None:
         return None
     if not isinstance(value, str):
-        raise ValueError(f"Dotted {key} must be a full HTTP(S) URL or null")
+        raise ValueError(f"Dotted Line {key} must be a full HTTP(S) URL or null")
     value = value.strip()
     if not value:
         return None
     parsed = urlsplit(value)
     if parsed.scheme not in ("http", "https") or not parsed.netloc:
-        raise ValueError(f"Dotted {key} must be a full HTTP(S) URL or null")
+        raise ValueError(f"Dotted Line {key} must be a full HTTP(S) URL or null")
     return value
 
 
 def app_card(root="./"):
     url = escape(f"{root}apps/dotted/", quote=True)
-    return f'''<a class="app-card" href="{url}"><img class="app-icon" src="{root}assets/dotted-icon.png" width="64" height="64" alt=""><div class="app-card-copy"><h3>Dotted</h3><p>Visualize your day, week, month, and year in dots.</p><span class="platforms">iPhone, iPad, and Mac</span></div></a>'''
+    return f'''<a class="app-card" href="{url}"><img class="app-icon" src="{root}assets/dotted-icon.png" width="64" height="64" alt=""><div class="app-card-copy"><h3>Dotted Line</h3><p>Visualize your day, week, month, and year in dots.</p><span class="platforms">iPhone, iPad, and Mac</span></div></a>'''
 
 
 def post_list(posts, root="./", limit=None, compact=False):
@@ -119,12 +119,12 @@ def apps():
 def dotted(website_url=None, app_store_url=None):
     links = []
     if website_url:
-        links.append(f'<a class="button product-website" href="{escape(website_url, quote=True)}">Visit Dotted’s website {external_icon()}</a>')
+        links.append(f'<a class="button product-website" href="{escape(website_url, quote=True)}">Visit Dotted Line’s website {external_icon()}</a>')
     if app_store_url:
         links.append(f'<a class="button button-secondary" href="{escape(app_store_url, quote=True)}">View on the App Store {external_icon()}</a>')
     actions = '<div class="product-actions">' + ''.join(links) + '</div>' if links else ''
     gallery = dotted_screenshots()
-    return f'''<a class="back-link" href="../">Back to apps</a><section class="product-hero"><div class="product-title"><img class="app-icon" src="../../assets/dotted-icon.png" width="80" height="80" alt=""><div><h1>Dotted</h1><p class="platforms">iPhone, iPad, and Mac</p></div></div><p class="product-description">After my son was born, I quickly realized how little time we have on this earth and how quickly it passes. I built Dotted to remind myself of that and to live each day with intention.</p>{actions}</section><section class="product-screenshots" aria-labelledby="screenshots-heading"><h2 id="screenshots-heading">Screenshots</h2>{gallery}</section><p class="page-note">Questions about Dotted? <a href="mailto:{{email}}">Email me.</a></p>'''
+    return f'''<a class="back-link" href="../">Back to apps</a><section class="product-hero"><div class="product-title"><img class="app-icon" src="../../assets/dotted-icon.png" width="80" height="80" alt=""><div><h1>Dotted Line</h1><p class="platforms">iPhone, iPad, and Mac</p></div></div><p class="product-description">After my son was born, I quickly realized how little time we have on this earth and how quickly it passes. I built Dotted Line to remind myself of that and to live each day with intention.</p><p class="product-description">Dotted Line shows your day, week, month, and year in dots, with event countdowns, daily intentions, and Home Screen widgets. The core app is free on iPhone and iPad; a one-time Premium purchase unlocks widgets, custom colors, and the Mac app.</p>{actions}</section><section class="product-screenshots" aria-labelledby="screenshots-heading"><h2 id="screenshots-heading">Screenshots</h2>{gallery}</section><p class="page-note">Questions about Dotted Line? <a href="mailto:{{email}}">Email me.</a></p>'''
 
 
 def blog(posts):
@@ -256,8 +256,8 @@ def build(destination, include_drafts=False):
 
     page("index.html", f"{site_name} — Apps, writing, and things I’m learning.",
          f"Hi, I’m {person_name}. Software engineer, data scientist, and independent app developer, with 10+ years in engineering and 5+ years in data science.", home(posts, person_name), "home")
-    page("apps/index.html", f"Apps — {site_name}", f"Explore Dotted and the apps I make. Independently built by {person_name}.", apps(), "apps")
-    page("apps/dotted/index.html", "Dotted — Time in dots", "See your time in dots, set an intention, and count down to the moments ahead. An app I made.", dotted(dotted_url, dotted_store_url), "apps")
+    page("apps/index.html", f"Apps — {site_name}", f"Explore Dotted Line and the apps I make. Independently built by {person_name}.", apps(), "apps")
+    page("apps/dotted/index.html", "Dotted Line — Time Progress & Countdown Widgets", "Track your day, week, month, and year in dots with Dotted Line. Event countdowns, daily intentions, and Home Screen widgets for iPhone, iPad, and Mac.", dotted(dotted_url, dotted_store_url), "apps")
     page("blog/index.html", f"Blog — {site_name}", f"Notes from {person_name} on software engineering, data science, and building things.", blog(posts), "blog")
     page("about/index.html", f"About — {site_name}", f"Hi, I’m {person_name}. Software engineer, data scientist, and independent app developer. My work and what I’m exploring.", about(person_name), "about")
     for post in posts:

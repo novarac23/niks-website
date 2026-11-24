@@ -88,9 +88,9 @@ Buttons use 6px corners; portrait and code blocks use 12px; app icons use 14px i
 
 - **Navigation:** Home, Apps, Blog, About, Contact Me. Default links are muted; hover becomes ink; current desktop route gets a blue underline. The phone disclosure has a 44px hit target, visible focus, and hamburger/close states. Contact Me is a mail link after About.
 - **Homepage:** title, role, approved introduction, Apps, Recent posts. No hero actions or “how I work” section.
-- **App row:** actual icon, title, factual description, platforms. The whole row links to the local detail page; no separate “View app” label.
+- **App row:** actual icon, full app name “Dotted Line,” factual description, platforms. The whole row links to the local detail page; no separate “View app” label.
 - **Recent post row:** date left and title right, including on phones. The full Blog page keeps descriptions, dates, and reading times. Post categories are omitted throughout the site.
-- **Dotted detail:** real icon, personal story, website and App Store links beside each other when space permits, four original screenshots with concise captions. No feature table.
+- **Dotted Line detail:** heading “Dotted Line,” real icon, personal story, one short factual app summary, website and App Store links beside each other when space permits, four original screenshots with concise captions. No feature table.
 - **Links and buttons:** underlines and visible keyboard focus; minimum 44px for navigation/action controls. Primary product action uses ink with white text; secondary action uses a restrained border. Actions wrap naturally.
 - **Code:** labeled, selectable, horizontally scrollable blocks; Python highlighting at build time and `text` fences for output. Preserve keyboard access to scrolling.
 - **Footer and browser icon:** site name left, literal `@` plus current year right. No email or company line. Keep the explicit empty icon declaration on canonical and redirect pages.

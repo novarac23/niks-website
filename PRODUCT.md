@@ -43,6 +43,8 @@ Contact is `nikola.novakovic@proton.me`. X is `https://x.com/novica93`. Keep the
 
 ## Brand Commitments
 
+The app’s public-facing name is **Dotted Line** on the homepage, Apps listing, detail page, and supporting interface text. Its route remains `/apps/dotted/`.
+
 Keep the site centered on Nikola and his actual work. No visible Nova Software/company attribution. The footer is the site name plus `@ YEAR`. Do not revive removed sections or marketing language as incidental “polish.” The approved palette, layout, and component details are in DESIGN.md.
 
 Homepage introduction:
@@ -51,7 +53,9 @@ Homepage introduction:
 
 Dotted story:
 
-> After my son was born, I quickly realized how little time we have on this earth and how quickly it passes. I built Dotted to remind myself of that and to live each day with intention.
+> After my son was born, I quickly realized how little time we have on this earth and how quickly it passes. I built Dotted Line to remind myself of that and to live each day with intention.
+
+The Dotted overview also includes a short, factual summary of time progress, event countdowns, daily intentions, and Home Screen widgets. The core app is free on iPhone and iPad; widgets, custom colors, and the Mac app require a one-time Premium purchase, verified against the official App Store listing on November 24, 2026. Exact regional pricing stays on the App Store. Its page title names Dotted Line and time progress/countdown widgets. The comeback post links to the local overview while retaining its direct App Store download link.
 
 ## Evidence on Hand
 

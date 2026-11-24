@@ -1,0 +1,127 @@
+{
+  "origin": "https://novarac.com",
+  "excludes": "navigation, headers, footers, self links, and draft/redirect pages",
+  "pages": [
+    {
+      "url": "https://novarac.com/",
+      "contextualInbound": 0,
+      "linkedFrom": []
+    },
+    {
+      "url": "https://novarac.com/apps/",
+      "contextualInbound": 3,
+      "linkedFrom": [
+        "https://novarac.com/",
+        "https://novarac.com/about/",
+        "https://novarac.com/apps/dotted/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/apps/dotted/",
+      "contextualInbound": 3,
+      "linkedFrom": [
+        "https://novarac.com/",
+        "https://novarac.com/apps/",
+        "https://novarac.com/blog/2026-11-21-comeback/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/",
+      "contextualInbound": 12,
+      "linkedFrom": [
+        "https://novarac.com/",
+        "https://novarac.com/about/",
+        "https://novarac.com/blog/2026-11-21-comeback/",
+        "https://novarac.com/blog/back-to-basics-stats/",
+        "https://novarac.com/blog/feedback-loops/",
+        "https://novarac.com/blog/guide-on-surviving-grad-school/",
+        "https://novarac.com/blog/lessons-from-2019/",
+        "https://novarac.com/blog/lessons-learned-2020/",
+        "https://novarac.com/blog/lessons-learned/",
+        "https://novarac.com/blog/overengineering-solutions/",
+        "https://novarac.com/blog/simple-and-practical-nlp/",
+        "https://novarac.com/blog/tweetanator-updates/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/about/",
+      "contextualInbound": 0,
+      "linkedFrom": []
+    },
+    {
+      "url": "https://novarac.com/blog/2026-11-21-comeback/",
+      "contextualInbound": 2,
+      "linkedFrom": [
+        "https://novarac.com/",
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/simple-and-practical-nlp/",
+      "contextualInbound": 3,
+      "linkedFrom": [
+        "https://novarac.com/",
+        "https://novarac.com/blog/",
+        "https://novarac.com/blog/2026-11-21-comeback/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/guide-on-surviving-grad-school/",
+      "contextualInbound": 2,
+      "linkedFrom": [
+        "https://novarac.com/",
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/lessons-learned/",
+      "contextualInbound": 1,
+      "linkedFrom": [
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/back-to-basics-stats/",
+      "contextualInbound": 1,
+      "linkedFrom": [
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/lessons-learned-2020/",
+      "contextualInbound": 1,
+      "linkedFrom": [
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/tweetanator-updates/",
+      "contextualInbound": 1,
+      "linkedFrom": [
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/overengineering-solutions/",
+      "contextualInbound": 1,
+      "linkedFrom": [
+        "https://novarac.com/blog/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/feedback-loops/",
+      "contextualInbound": 2,
+      "linkedFrom": [
+        "https://novarac.com/blog/",
+        "https://novarac.com/blog/overengineering-solutions/"
+      ]
+    },
+    {
+      "url": "https://novarac.com/blog/lessons-from-2019/",
+      "contextualInbound": 1,
+      "linkedFrom": [
+        "https://novarac.com/blog/"
+      ]
+    }
+  ]
+}

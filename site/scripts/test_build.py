@@ -195,9 +195,9 @@ class PublicationTests(unittest.TestCase):
         for name, root in (("index.html", "./"), ("apps/index.html", "../")):
             source = (self.output / name).read_text()
             self.assertIn(f'<a class="app-card" href="{root}apps/dotted/">', source)
-            self.assertIn("<h3>Dotted</h3>", source)
+            self.assertIn("<h3>Dotted Line</h3>", source)
         detail = (self.output / "apps/dotted/index.html").read_text()
-        self.assertIn("Visit Dotted’s website", detail)
+        self.assertIn("Visit Dotted Line’s website", detail)
         self.assertIn('href="https://dotted.novarac.com/?from=site&amp;view=home"', detail)
 
     def test_invalid_app_url_preserves_previous_build(self):
@@ -223,7 +223,7 @@ class PublicationTests(unittest.TestCase):
             source = (self.output / "apps/dotted/index.html").read_text()
             self.assertIn('href="https://apps.apple.com/app/id6760857931"', source)
             self.assertIn("View on the App Store", source)
-            self.assertEqual("Visit Dotted’s website" in source, website is not None)
+            self.assertEqual("Visit Dotted Line’s website" in source, website is not None)
 
     def test_invalid_app_store_url_is_rejected(self):
         config = json.loads(build.CONFIG.read_text())
